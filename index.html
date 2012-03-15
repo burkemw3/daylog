@@ -1,0 +1,14 @@
+---
+layout: default
+title: Tom Preston-Werner
+---
+
+<div id="home">
+  <h1>Daylog</h1>
+  {% for post in site.posts %}
+    <h2>{{ post.title }}</h2>
+    <div>{{ post.date | date_to_string }}</div>
+    <div>{{ post.content }}</div>
+  {% endfor %}
+</div>
+
