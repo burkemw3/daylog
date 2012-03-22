@@ -15,6 +15,11 @@ div.date {
         <div>There are some neat scripts for installing free Internet Explorer test virtual machines from Microsoft at <a href="https://github.com/xdissent/ievms">https://github.com/xdissent/ievms</a>.</div>
     </div>
     <div class="entry">
+        <h2>Bash Startup Files (profile, .bash_profile, .bash_login, .profile)</h2>
+        <div class="date">Wednesday, March 21, 2012 3:43 PM Eastern</div>
+        <div>When I first setup my work mac 10.7, I had some bash configuration options I wanted to set. The ~/.profile file existed, but no other bash startup files did. I read a little bit about the different files, didn't find any convincing arguments for me to care much, and put my configuration options in ~/.profile. Recently, I noticed that my tab completions and environment variables weren't getting set properly. I investigated a bit more today, and found the ~/.profile wasn't getting executed. I had a ~/.bash_login file! <a href="http://stefaanlippens.net/bashrc_and_others">Bashrc and others</a> taught me about the loading order. I had installed RVM recently, which created my ~/.bash_login file and caused my ~/.profile to be not executed.</div>
+    </div>
+    <div class="entry">
         <h2>Eclipse Incremental Find</h2>
         <div class="date">Friday, March 16, 2012 12:01 PM Eastern</div>
         <div>Forward: &#8984;+J. Backward &#8984;+SHIFT+J.</div>
