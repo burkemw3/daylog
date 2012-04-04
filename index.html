@@ -13,27 +13,27 @@ div.date {
 <body>
     <h1>MWB Daylog</h1>
     <div class="entry">
-        <h2>Git Log Branch Graphs</h2>
+        <a name="git-log-branch-graphs"><h2>Git Log Branch Graphs</h2></a>
         <div class="date">Tuesday, April 03, 2012 3:03 PM Eastern</div>
         <div>There are two good ways to visualize branches: on the command line <tt>git log --graph --oneline --all --decorate --abbrev-commit</tt> and using <tt>gitk -all</tt>. There are lots of variants to these commands; use <tt>gitk branch1 branch2</tt> to visual the two branches.</div>
     </div>
     <div class="entry">
-        <h2>IE VirtualBox VM Installation Scripts for OS X and Linux</h2>
+        <a name="ie-virtualbox-vms"><h2>IE VirtualBox VM Installation Scripts for OS X and Linux</h2></a>
         <div class="date">Thursday, March 22, 2012 11:15 AM Eastern</div>
         <div>There are some neat scripts for installing free Internet Explorer test virtual machines from Microsoft at <a href="https://github.com/xdissent/ievms">https://github.com/xdissent/ievms</a>.</div>
     </div>
     <div class="entry">
-        <h2>Bash Startup Files (profile, .bash_profile, .bash_login, .profile)</h2>
+        <a name="bash-startup-files"><h2>Bash Startup Files (profile, .bash_profile, .bash_login, .profile)</h2></a>
         <div class="date">Wednesday, March 21, 2012 3:43 PM Eastern</div>
         <div>When I first setup my work mac 10.7, I had some bash configuration options I wanted to set. The ~/.profile file existed, but no other bash startup files did. I read a little bit about the different files, didn't find any convincing arguments for me to care much, and put my configuration options in ~/.profile. Recently, I noticed that my tab completions and environment variables weren't getting set properly. I investigated a bit more today, and found the ~/.profile wasn't getting executed. I had a ~/.bash_login file! <a href="http://stefaanlippens.net/bashrc_and_others">Bashrc and others</a> taught me about the loading order. I had installed RVM recently, which created my ~/.bash_login file and caused my ~/.profile to be not executed.</div>
     </div>
     <div class="entry">
-        <h2>Eclipse Incremental Find</h2>
+        <a name="eclipse-incremental-find"><h2>Eclipse Incremental Find</h2></a>
         <div class="date">Friday, March 16, 2012 12:01 PM Eastern</div>
         <div>Forward: &#8984;+J. Backward &#8984;+SHIFT+J.</div>
     </div>
     <div class="entry">
-        <h2>Excluding Git Tracked Files</h2>
+        <a name="exluding-git-tracked-files"><h2>Excluding Git Tracked Files</h2></a>
         <div class="date">Thursday, March 15, 2012 5:33 PM Eastern</div>
         <div>I have a file (.classpath) that git was tracking, but I didn&#8217;t want to see changes to with git status or commit them. The .gitignore file ignores untracked files, but not tracked ones. Some git index abuse allowed me to get what I wanted: <tt>git update-index --assume-unchanged &lt;file&gt;</tt>.</div>
     </div> 
