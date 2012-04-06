@@ -1,45 +1,13 @@
-<html>
-<head>
-    <title>MWB Daylog</title>
-<style>
-body {
-    font-size: 1.2em;
-}
-</style>
-</head>
-<body>
-    <h1>MWB Daylog</h1>
-    <div class="entry">
-        <a name="eclipse-debugger-step-filtering"><h2>Eclipse Debugger Step Filtering</h2></a>
-        <p class="date">Wednesday, April 4, 2012 5:11 PM Eastern</p>
-        <p>Spring proxies calls to methods on other objects. The proxying makes it difficult to step into the method. Previously, I was jumping to the defintion of the method I wanted to step into, setting a breakpoint, continuing execution, and removing the breakpoint. It worked, but was annoying.</p>
-        <p>Today, I found Eclipse's Step Filtering at Preferences &gt; Java &gt; Debug &gt; Step Filtering. This will skip packages or classes when debugging. I am now filtering the following packages: com.mchange.v2.*, com.mysql.*, com.postresql.*, java.*, net.sf.cflib.*, org.apache.*, org.hibernate.*, org.postresql.*, org.slf4j.*, org.springframework.*, sun.*. I left the default java.lang.ClassLoader class filtered as well.</p>
-        <p>As I debug other areas of my applications, I expect I will tweak these filters. I will try to post updates here.</p>
-    </div>
-    <div class="entry">
-        <a name="git-log-branch-graphs"><h2>Git Log Branch Graphs</h2></a>
-        <p class="date">Tuesday, April 3, 2012 3:03 PM Eastern</p>
-        <p>There are two good ways to visualize branches: on the command line <tt>git log --graph --oneline --all --decorate --abbrev-commit</tt> and using <tt>gitk -all</tt>. There are lots of variants to these commands; use <tt>gitk branch1 branch2</tt> to visual the two branches.</p>
-    <div class="entry">
-        <a name="ie-virtualbox-vms"><h2>IE VirtualBox VM Installation Scripts for OS X and Linux</h2></a>
-        <p class="date">Thursday, March 22, 2012 11:15 AM Eastern</p>
-        <p>There are some neat scripts for installing free Internet Explorer test virtual machines from Microsoft at <a href="https://github.com/xdissent/ievms">https://github.com/xdissent/ievms</a>.</p>
-    </div>
-    <div class="entry">
-        <a name="bash-startup-files"><h2>Bash Startup Files (profile, .bash_profile, .bash_login, .profile)</h2></a>
-        <p class="date">Wednesday, March 21, 2012 3:43 PM Eastern</p>
-        <p>When I first setup my work mac 10.7, I had some bash configuration options I wanted to set. The ~/.profile file existed, but no other bash startup files did. I read a little bit about the different files, didn't find any convincing arguments for me to care much, and put my configuration options in ~/.profile. Recently, I noticed that my tab completions and environment variables weren't getting set properly. I investigated a bit more today, and found the ~/.profile wasn't getting executed. I had a ~/.bash_login file! <a href="http://stefaanlippens.net/bashrc_and_others">Bashrc and others</a> taught me about the loading order. I had installed RVM recently, which created my ~/.bash_login file and caused my ~/.profile to be not executed.</p>
-    </div>
-    <div class="entry">
-        <a name="eclipse-incremental-find"><h2>Eclipse Incremental Find</h2></a>
-        <p class="date">Friday, March 16, 2012 12:01 PM Eastern</p>
-        <p>Forward: &#8984;+J. Backward &#8984;+SHIFT+J.</p>
-    </div>
-    <div class="entry">
-        <a name="exluding-git-tracked-files"><h2>Excluding Git Tracked Files</h2></a>
-        <p class="date">Thursday, March 15, 2012 5:33 PM Eastern</p>
-        <p>I have a file (.classpath) that git was tracking, but I didn&#8217;t want to see changes to with git status or commit them. The .gitignore file ignores untracked files, but not tracked ones. Some git index abuse allowed me to get what I wanted: <tt>git update-index --assume-unchanged &lt;file&gt;</tt>.</p>
-    </div> 
-</body>
-</html>
+---
+layout: default
+title: MWB Daylog
+---
 
+<h1>MWB Daylog</h1>
+{% for post in site.posts %}
+<div class="entry">
+    <a name="{{ post.title }}"><h2>{{ post.title }}</h2></a>
+    <p class="date">{{ post.date | date: "%Y %B %d" }}</p>
+    {{ post.content }}
+</div>
+{% endfor %}
