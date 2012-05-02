@@ -6,8 +6,9 @@ title: MWB Daylog
 <h1>MWB Daylog</h1>
 {% for post in site.posts %}
 <div class="entry">
-    <a name="{{ post.title }}"><h2>{{ post.title }}</h2></a>
+    <a name="{{ post.title }}"></a><a href="#{{ post.title }}"><h2>{{ post.title }}</h2></a>
     <p class="date">{{ post.date | date: "%Y %B %d" }}</p>
     {{ post.content }}
 </div>
 {% endfor %}
+
