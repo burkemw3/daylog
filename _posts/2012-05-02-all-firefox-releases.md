@@ -12,3 +12,5 @@ I found all the version of FireFox at [http://releases.mozilla.org/pub/mozilla.o
 
 Using version 11 my web drivers worked again.
 
+Then, in Preferences -> Advanced -> Update I told FireFox to "Check for updates, but let me choose whether to install them."
+
