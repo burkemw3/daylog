@@ -1,6 +1,6 @@
 ---
 title: euca2ools for OS X
-tags: eucalyptus, euca2ools, OSX
+tags: eucalyptus, euca2ools, OS X
 ---
 
 <small>euca2ools are written in python. You might want to use a
