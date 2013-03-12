@@ -8,7 +8,7 @@ I was getting an error from my web driver tests:
 
 I expected this was related to the FireFox driver not being compatible with my current version of FireFox.
 
-I found all the version of FireFox at [http://releases.mozilla.org/pub/mozilla.org/firefox/releases/](http://releases.mozilla.org/pub/mozilla.org/firefox/releases/).
+I found all the version of FireFox at <http://ftp.mozilla.org/pub/mozilla.org/firefox/releases/>.
 
 Using version 11 my web drivers worked again.
 
